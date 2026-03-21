@@ -2,9 +2,8 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
 const socials = [
-  { icon: Github, label: "GitHub" },
-  { icon: Linkedin, label: "LinkedIn" },
-  { icon: Twitter, label: "Twitter" },
+  { icon: Github, label: "GitHub", href: "https://github.com/ashmikan" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ashmika-nathali/" },
 ];
 
 const Footer = () => (
@@ -23,7 +22,9 @@ const Footer = () => (
         {socials.map((item, i) => (
           <motion.a
             key={item.label}
-            href="#"
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

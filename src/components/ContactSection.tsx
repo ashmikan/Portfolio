@@ -35,8 +35,8 @@ const ContactSection = () => {
             </p>
             <div className="space-y-4">
               {[
-                { icon: Mail, text: "ashmika@example.com" },
-                { icon: MapPin, text: "Colombo, Sri Lanka" },
+                { icon: Mail, text: "ashmika.nathali123@gmail.com" },
+                { icon: MapPin, text: "Kalutara, Sri Lanka" },
               ].map((item, i) => (
                 <motion.div
                   key={item.text}

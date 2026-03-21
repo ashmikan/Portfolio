@@ -58,7 +58,7 @@ const HeroSection = () => (
           animate="visible"
           className="font-body text-lg text-muted-foreground max-w-md mb-8 leading-relaxed"
         >
-          Crafting elegant digital experiences through clean code and thoughtful design. Based in Sri Lanka, building for the world.
+          Crafting elegant digital experiences through clean code and thoughtful design. 
         </motion.p>
         <motion.div
           custom={3}
