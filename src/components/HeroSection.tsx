@@ -69,7 +69,7 @@ const HeroSection = () => (
         >
           <a
             href="#projects"
-            className="group relative inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-body font-medium text-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_hsl(12_76%_61%/0.3)]"
+            className="group relative inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-body font-medium text-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_hsl(12_76%_61%/0.3)] border border-transparent hover:border-white"
           >
             <span className="relative z-10">View Projects</span>
             <span className="absolute inset-0 bg-foreground/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
