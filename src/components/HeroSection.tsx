@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import heroImg from "@/assets/hero-portrait.jpg";
+import heroImg from "@/assets/hero-portrait2.jpeg";
 
 const easeOut: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
