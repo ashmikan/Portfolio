@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Framer Motion"],
+    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs"],
+    skills: ["Node.js", "Express", "MySQL", "REST APIs"],
   },
   {
     title: "Tools & Design",
-    skills: ["Git", "Docker", "Figma", "VS Code", "Postman"],
+    skills: ["Git", "Figma", "VS Code", "Postman"],
   },
 ];
 
@@ -52,7 +52,7 @@ const SkillsSection = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
             whileHover={{ y: -4, transition: { duration: 0.3 } }}
-            className="bg-card rounded-xl p-8 border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-[0_8px_30px_hsl(12_76%_61%/0.08)]"
+            className="bg-card rounded-xl p-8 border border-border hover:border-accent/30 border-width-10 transition-all duration-300 hover:shadow-[0_8px_30px_hsl(12_76%_61%/0.08)]"
           >
             <h3 className="font-display text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-accent inline-block" />
