@@ -58,7 +58,7 @@ const HeroSection = () => (
           animate="visible"
           className="font-body text-lg text-muted-foreground max-w-md mb-8 leading-relaxed"
         >
-          Crafting elegant digital experiences through clean code and thoughtful design. 
+          Creating efficient and elegant web solutions through clean code and intuitive design. Let's build something amazing together.
         </motion.p>
         <motion.div
           custom={3}
@@ -76,7 +76,7 @@ const HeroSection = () => (
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:bg-secondary hover:border-accent/30 transition-all duration-300"
+            className="inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:bg-secondary hover:border-accent/30 transition-all duration-300 hover:border-blue-500 border-width-10"
           >
             Get in Touch
           </a>
