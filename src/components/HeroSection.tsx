@@ -21,13 +21,24 @@ const floatingVariant = {
   },
 };
 
+const chipReveal = {
+  hidden: { opacity: 0, y: 24, scale: 0.95 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.55, delay: 0.9 + i * 0.12, ease: easeOut },
+  }),
+};
+
 const HeroSection = () => (
   <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-    {/* Ambient gradient blobs */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--accent)/0.22),transparent_44%),radial-gradient(circle_at_82%_68%,hsl(var(--accent)/0.16),transparent_38%),linear-gradient(to_bottom,hsl(230_26%_11%),hsl(var(--background)))]" />
+    <div className="absolute inset-0 opacity-25 [mask-image:radial-gradient(circle_at_center,black_34%,transparent_76%)] bg-[linear-gradient(to_right,hsl(var(--foreground)/0.07)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--foreground)/0.07)_1px,transparent_1px)] bg-[size:42px_42px]" />
     <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
     <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
       <div className="overflow-hidden">
         <motion.p
           custom={0}
@@ -46,7 +57,9 @@ const HeroSection = () => (
             animate="visible"
             className="font-display text-5xl md:text-7xl font-bold leading-[1.1] text-foreground mb-6"
           >
-            Ashmika
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-white to-foreground/70">
+              Ashmika
+            </span>
             <br />
             <span className="text-accent">Nathali</span>
           </motion.h1>
@@ -65,7 +78,7 @@ const HeroSection = () => (
           variants={textReveal}
           initial="hidden"
           animate="visible"
-          className="flex gap-4"
+          className="flex flex-wrap gap-4"
         >
           <a
             href="#projects"
@@ -94,15 +107,14 @@ const HeroSection = () => (
           animate="animate"
           className="relative w-72 h-72 md:w-96 md:h-96"
         >
-          {/* Glowing ring */}
-          <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-accent/30 via-transparent to-accent/10 blur-2xl animate-pulse pointer-events-none" />
+          <div className="absolute -inset-5 rounded-[40%] bg-gradient-to-tr from-accent/35 via-accent/10 to-foreground/10 blur-2xl animate-pulse pointer-events-none" />
           <div className="absolute inset-0 rounded-full bg-accent/20 blur-3xl" />
+          <div className="absolute inset-0 rounded-full border border-white/10" />
           <img
             src={heroImg}
             alt="Ashmika Nathali"
-            className="relative w-full h-full object-cover rounded-full border-4 border-card shadow-2xl"
+            className="relative w-full h-full object-cover rounded-full border-4 border-card shadow-[0_30px_70px_hsl(230_35%_6%/0.7)]"
           />
-          {/* Decorative orbit dot */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
