@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -12,7 +13,9 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
   const { scrollY } = useScroll();
   const bgOpacity = useTransform(scrollY, [0, 100], [0.6, 0.95]);
 
@@ -22,6 +25,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = resolvedTheme !== "light";
+  const toggleTheme = () => setTheme(isDark ? "light" : "dark");
+
   return (
     <motion.nav
       initial={{ y: -40, opacity: 0 }}
@@ -30,7 +40,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-all duration-300 ${
         scrolled ? "border-border shadow-lg shadow-background/50" : "border-transparent"
       }`}
-      style={{ backgroundColor: `hsl(230 25% 10% / var(--nav-opacity))` } as any}
+      style={{ backgroundColor: `hsl(var(--navbar-bg) / var(--nav-opacity))` } as any}
     >
       <motion.div style={{ "--nav-opacity": bgOpacity } as any}>
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
@@ -57,14 +67,35 @@ const Navbar = () => {
             ))}
           </ul>
 
+          <div className="hidden md:flex items-center">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background/70 text-foreground hover:text-accent hover:border-accent/40 transition-colors"
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {mounted && isDark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          </div>
+
           {/* Mobile toggle */}
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            className="md:hidden text-foreground"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background/70 text-foreground"
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {mounted && isDark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              className="text-foreground"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? <X size={24} /> : <Menu size={24} />}
+            </motion.button>
+          </div>
         </div>
       </motion.div>
 

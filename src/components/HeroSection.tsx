@@ -33,7 +33,7 @@ const chipReveal = {
 
 const HeroSection = () => (
   <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--accent)/0.22),transparent_44%),radial-gradient(circle_at_82%_68%,hsl(var(--accent)/0.16),transparent_38%),linear-gradient(to_bottom,hsl(230_26%_11%),hsl(var(--background)))]" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--accent)/0.22),transparent_44%),radial-gradient(circle_at_82%_68%,hsl(var(--accent)/0.16),transparent_38%),linear-gradient(to_bottom,hsl(var(--hero-gradient-top)),hsl(var(--background)))]" />
     <div className="absolute inset-0 opacity-25 [mask-image:radial-gradient(circle_at_center,black_34%,transparent_76%)] bg-[linear-gradient(to_right,hsl(var(--foreground)/0.07)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--foreground)/0.07)_1px,transparent_1px)] bg-[size:42px_42px]" />
     <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
     <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
@@ -57,7 +57,7 @@ const HeroSection = () => (
             animate="visible"
             className="font-display text-5xl md:text-7xl font-bold leading-[1.1] text-foreground mb-6"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-white to-foreground/70">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60">
               Ashmika
             </span>
             <br />
@@ -82,7 +82,7 @@ const HeroSection = () => (
         >
           <a
             href="#projects"
-            className="group relative inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-body font-medium text-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_hsl(12_76%_61%/0.3)] border border-transparent hover:border-white"
+            className="group relative inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-body font-medium text-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_hsl(12_76%_61%/0.3)] border border-transparent hover:border-foreground/30"
           >
             <span className="relative z-10">View Projects</span>
             <span className="absolute inset-0 bg-foreground/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
@@ -109,7 +109,7 @@ const HeroSection = () => (
         >
           <div className="absolute -inset-5 rounded-[40%] bg-gradient-to-tr from-accent/35 via-accent/10 to-foreground/10 blur-2xl animate-pulse pointer-events-none" />
           <div className="absolute inset-0 rounded-full bg-accent/20 blur-3xl" />
-          <div className="absolute inset-0 rounded-full border border-white/10" />
+          <div className="absolute inset-0 rounded-full border border-foreground/15" />
           <img
             src={heroImg}
             alt="Ashmika Nathali"
