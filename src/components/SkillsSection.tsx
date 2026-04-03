@@ -52,7 +52,7 @@ const SkillsSection = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
             whileHover={{ y: -4, transition: { duration: 0.3 } }}
-            className="bg-card rounded-xl p-8 border border-border hover:border-accent/30 border-width-10 transition-all duration-300 hover:shadow-[0_8px_30px_hsl(12_76%_61%/0.08)]"
+            className="bg-card rounded-xl p-8 border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-[0_8px_30px_hsl(var(--accent)/0.12)]"
           >
             <h3 className="font-display text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-accent inline-block" />
@@ -71,8 +71,8 @@ const SkillsSection = () => (
                   variants={skillVariants}
                   whileHover={{
                     scale: 1.1,
-                    backgroundColor: "hsl(12 76% 61% / 0.15)",
-                    borderColor: "hsl(12 76% 61% / 0.5)",
+                    backgroundColor: "hsl(var(--accent) / 0.14)",
+                    borderColor: "hsl(var(--accent) / 0.45)",
                     transition: { duration: 0.2 },
                   }}
                   className="font-body text-sm px-4 py-2 rounded-lg bg-secondary text-secondary-foreground border border-border cursor-default transition-colors"
