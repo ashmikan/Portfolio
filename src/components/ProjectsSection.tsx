@@ -3,6 +3,9 @@ import { ExternalLink, Github } from "lucide-react";
 import project1 from "@/assets/project-1.png";
 import project2 from "@/assets/project-2.png";
 import project3 from "@/assets/project-3.png";
+import project4 from "@/assets/project-4.png";
+import project5 from "@/assets/project-5.png";
+import project6 from "@/assets/project-6.png";
 
 const projects = [
   {
@@ -22,6 +25,24 @@ const projects = [
     desc: "An AI-powered web application designed to analyze full-body images and detect posture abnormalities in real time.",
     tags: ["Laravel", "Python", "PHP", "OpenCV", "MediaPipe Pose", "MySQL"],
     image: project3,
+  },
+  {
+    title: "Lumiera - Modern Social Media Platform",
+    desc: "A modern social media platform with authentication, posts, likes, comments, follows, notifications, and real-time chat.",
+    tags: ["React", "Node.js", "Express.js", "MySQL2", "Socket.io", "JWT", "Multer"],
+    image: project4,
+  },
+  {
+    title: "CashFlow - Personal Finance Tracker",
+    desc: "A full-stack personal finance app that helps users track income and expenses, manage transactions securely, and view clear dashboard insights such as summaries, recent activity, monthly reports, and charts for better money decisions.",
+    tags: ["React", "Node.js", "Express.js", "MySQL"],
+    image: project5,
+  },
+  {
+    title: "2048 Pygame",
+    desc: "A classic 2048 puzzle game built with Pygame where you slide and merge numbered tiles, track your score, and try to fill the board strategically before you lose.",
+    tags: ["Python", "Pygame"],
+    image: project6,
   },
 ];
 
