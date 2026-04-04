@@ -103,7 +103,7 @@ const ContactSection = () => {
               type="submit"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:shadow-[0_0_25px_hsl(12_76%_61%/0.3)] transition-shadow duration-300"
+              className="inline-flex items-center gap-2 border-border text-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:bg-secondary hover:border-accent/30 transition-all duration-300 hover:border-blue-500 border-width-15 active:bg-accent/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <Send size={16} /> Send Message
             </motion.button>
