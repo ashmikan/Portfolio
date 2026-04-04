@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import project1 from "@/assets/project-1.png";
+import project2 from "@/assets/project-2.png";
+import project3 from "@/assets/project-3.png";
 
 const projects = [
   {
-    title: "Analytics Dashboard",
-    desc: "A real-time analytics platform built with React, Node.js, and MongoDB. Features live charts, user management, and role-based access.",
-    tags: ["React", "Node.js", "MongoDB", "Chart.js"],
+    title: "SkyLumin - Weather App",
+    desc: "A clean and responsive weather application built with React and Vite that lets users quickly check real-time weather conditions for any city. It provides essential details like temperature, humidity, wind speed, and dynamic weather visuals/icons.",
+    tags: ["React", "Vite", "JavaScript", "Weather API"],
     image: project1,
   },
   {
-    title: "ShopEase Mobile App",
-    desc: "An e-commerce mobile application with cart management, payment integration, and push notifications.",
-    tags: ["React Native", "Express", "Stripe", "Firebase"],
+    title: "Planova - Event management Web Platform",
+    desc: "A web platform for planning and managing events like weddings, engagements, and birthday parties.",
+    tags: ["React", "Express.js", "Node.js", "MongoDB", "Figma"],
     image: project2,
   },
   {
-    title: "Brand Identity System",
-    desc: "Complete branding and identity design for a creative agency, including logo, stationery, and design guidelines.",
-    tags: ["Figma", "Illustrator", "Branding"],
+    title: "ScanMe:  AI-Based Body Posture Analysis",
+    desc: "An AI-powered web application designed to analyze full-body images and detect posture abnormalities in real time.",
+    tags: ["Laravel", "Python", "PHP", "OpenCV", "MediaPipe Pose", "MySQL"],
     image: project3,
   },
 ];
