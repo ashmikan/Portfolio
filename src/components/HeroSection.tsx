@@ -82,14 +82,14 @@ const HeroSection = () => (
         >
           <a
             href="#projects"
-            className="group relative inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-body font-medium text-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_hsl(12_76%_61%/0.3)] border border-transparent hover:border-foreground/30"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg border border-white/15 bg-gradient-to-r from-accent via-accent/95 to-accent/80 px-6 py-3 text-sm font-medium text-accent-foreground shadow-[0_10px_24px_hsl(var(--accent)/0.18),0_0_0_1px_hsl(var(--accent)/0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:shadow-[0_14px_28px_hsl(var(--accent)/0.24),0_0_0_1px_hsl(var(--accent)/0.18)] active:translate-y-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <span className="relative z-10">View Projects</span>
-            <span className="absolute inset-0 bg-foreground/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            <span className="absolute inset-0 bg-[linear-gradient(110deg,transparent_0%,hsl(var(--foreground)/0.15)_50%,transparent_100%)] translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:bg-secondary hover:border-accent/30 transition-all duration-300 hover:border-blue-500 border-width-10"
+            className="inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:bg-secondary hover:border-accent/30 transition-all duration-300 hover:border-blue-500 border-width-15 active:bg-accent/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             Get in Touch
           </a>
