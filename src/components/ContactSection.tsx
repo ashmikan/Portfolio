@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send } from "lucide-react";
+import type { FormEvent } from "react";
 import { useState } from "react";
 
 const inputClasses =
@@ -8,7 +9,7 @@ const inputClasses =
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     alert("Thanks for your message! I'll get back to you soon.");
     setFormData({ name: "", email: "", message: "" });
@@ -103,7 +104,7 @@ const ContactSection = () => {
               type="submit"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 border-border text-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:bg-secondary hover:border-accent/30 transition-all duration-300 hover:border-blue-500 border-width-15 active:bg-accent/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex items-center gap-2 border border-border bg-background text-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:bg-secondary hover:border-accent/60 hover:text-accent transition-all duration-300 active:bg-accent/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <Send size={16} /> Send Message
             </motion.button>
