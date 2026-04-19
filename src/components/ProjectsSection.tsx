@@ -7,42 +7,63 @@ import project4 from "@/assets/project-4.png";
 import project5 from "@/assets/project-5.png";
 import project6 from "@/assets/project-6.png";
 
-const projects = [
+type ProjectItem = {
+  title: string;
+  desc: string;
+  tags: string[];
+  image: string;
+  demoUrl?: string;
+  githubUrl?: string;
+};
+
+const projects: ProjectItem[] = [
   {
     title: "SkyLumin - Weather App",
     desc: "A clean and responsive weather application built with React and Vite that lets users quickly check real-time weather conditions for any city. It provides essential details like temperature, humidity, wind speed, and dynamic weather visuals/icons.",
     tags: ["React", "Vite", "JavaScript", "Weather API"],
     image: project1,
+    demoUrl: "",
+    githubUrl: "https://github.com/ashmikan/Weather-App",
   },
   {
     title: "Planova - Event management Web Platform",
     desc: "A web platform for planning and managing events like weddings, engagements, and birthday parties.",
     tags: ["React", "Express.js", "Node.js", "MongoDB", "Figma"],
     image: project2,
+    demoUrl: "",
+    githubUrl: "https://github.com/Pabasara2002/Planova---Frontend",
   },
   {
     title: "ScanMe:  AI-Based Body Posture Analysis",
     desc: "An AI-powered web application designed to analyze full-body images and detect posture abnormalities in real time.",
     tags: ["Laravel", "Python", "PHP", "OpenCV", "MediaPipe Pose", "MySQL"],
     image: project3,
+    demoUrl: "",
+    githubUrl: "https://github.com/AI-full-body-Image-analysis/AI-full-body-image-analysis",
   },
   {
     title: "Lumiera - Modern Social Media Platform",
     desc: "A modern social media platform with authentication, posts, likes, comments, follows, notifications, and real-time chat.",
     tags: ["React", "Node.js", "Express.js", "MySQL2", "Socket.io", "JWT", "Multer"],
     image: project4,
+    demoUrl: "",
+    githubUrl: "https://github.com/ashmikan/Socialmedia-Lumiera",
   },
   {
     title: "CashFlow - Personal Finance Tracker",
     desc: "A full-stack personal finance app that helps users track income and expenses, manage transactions securely, and view clear dashboard insights such as summaries, recent activity, monthly reports, and charts for better money decisions.",
     tags: ["React", "Node.js", "Express.js", "MySQL"],
     image: project5,
+    demoUrl: "",
+    githubUrl: "https://github.com/ashmikan/CashFlow",
   },
   {
     title: "2048 Pygame",
     desc: "A classic 2048 puzzle game built with Pygame where you slide and merge numbered tiles, track your score, and try to fill the board strategically before you lose.",
     tags: ["Python", "Pygame"],
     image: project6,
+    demoUrl: "",
+    githubUrl: "https://github.com/ashmikan/2048-Game",
   },
 ];
 
@@ -89,12 +110,26 @@ const ProjectsSection = () => (
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                   <div className="flex gap-4">
-                    <a href="#" className="inline-flex items-center gap-2 text-sm font-body font-medium text-accent-foreground bg-accent/90 px-4 py-2 rounded-lg hover:bg-accent transition-colors">
-                      <ExternalLink size={14} /> Demo
-                    </a>
-                    <a href="#" className="inline-flex items-center gap-2 text-sm font-body font-medium text-foreground bg-secondary/90 px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
-                      <Github size={14} /> Code
-                    </a>
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-body font-medium text-accent-foreground bg-accent/90 px-4 py-2 rounded-lg hover:bg-accent transition-colors"
+                      >
+                        <ExternalLink size={14} /> Demo
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-body font-medium text-foreground bg-secondary/90 px-4 py-2 rounded-lg hover:bg-secondary transition-colors"
+                      >
+                        <Github size={14} /> Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
