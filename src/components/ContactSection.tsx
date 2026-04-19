@@ -8,11 +8,62 @@ const inputClasses =
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const web3FormsAccessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    alert("Thanks for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+
+    if (!web3FormsAccessKey) {
+      setSubmitMessage({
+        type: "error",
+        text: "Contact form is not configured yet. Please add VITE_WEB3FORMS_ACCESS_KEY.",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: web3FormsAccessKey,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `Portfolio contact from ${formData.name}`,
+          from_name: "Portfolio Website",
+          replyto: formData.email,
+          botcheck: "",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitMessage({ type: "success", text: "Message sent successfully. I will get back to you soon." });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitMessage({
+          type: "error",
+          text: result.message || "Failed to send message. Please try again.",
+        });
+      }
+    } catch {
+      setSubmitMessage({
+        type: "error",
+        text: "Network error while sending your message. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -104,10 +155,20 @@ const ContactSection = () => {
               type="submit"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
+              disabled={isSubmitting}
               className="inline-flex items-center gap-2 border border-border bg-background text-foreground px-6 py-3 rounded-lg font-body font-medium text-sm hover:bg-secondary hover:border-accent/60 hover:text-accent transition-all duration-300 active:bg-accent/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              <Send size={16} /> Send Message
+              <Send size={16} /> {isSubmitting ? "Sending..." : "Send Message"}
             </motion.button>
+            {submitMessage && (
+              <p
+                className={`font-body text-sm ${
+                  submitMessage.type === "success" ? "text-green-600" : "text-red-600"
+                }`}
+              >
+                {submitMessage.text}
+              </p>
+            )}
           </motion.form>
         </div>
       </div>

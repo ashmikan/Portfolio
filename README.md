@@ -1,5 +1,21 @@
 # Getting Started with Create React App
 
+## Contact Form Setup (Web3Forms)
+
+The contact form in this portfolio sends submissions using Web3Forms.
+
+1. Go to https://web3forms.com and create a free access key for your email inbox.
+2. Create a `.env` file in the project root.
+3. Add this variable:
+
+```
+VITE_WEB3FORMS_ACCESS_KEY=your_real_access_key
+```
+
+4. Restart the dev server after updating environment variables.
+
+When someone submits the contact form, the message is delivered to the email inbox linked to your Web3Forms access key.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
