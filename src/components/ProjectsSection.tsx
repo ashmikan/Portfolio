@@ -6,6 +6,7 @@ import project3 from "@/assets/project-3.png";
 import project4 from "@/assets/project-4.png";
 import project5 from "@/assets/project-5.png";
 import project6 from "@/assets/project-6.png";
+import project7 from "@/assets/project-7.png";
 
 type ProjectItem = {
   title: string;
@@ -48,6 +49,14 @@ const projects: ProjectItem[] = [
     image: project4,
     demoUrl: "",
     githubUrl: "https://github.com/ashmikan/Socialmedia-Lumiera",
+  },
+  {
+    title: "Floréa - Flower Shop",
+    desc: "A stylish and responsive flower shop web application built with ASP.NET Core MVC that lets users browse bouquets, view product details, manage a cart, and explore a warm, elegant floral shopping experience.",
+    tags: ["ASP.NET Core MVC", "C#", "Bootstrap", "Razor"],
+    image: project7,
+    demoUrl: "",
+    githubUrl: "https://github.com/ashmikan/Florea"
   },
   {
     title: "CashFlow - Personal Finance Tracker",
