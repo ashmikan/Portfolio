@@ -7,6 +7,7 @@ import project4 from "@/assets/project-4.png";
 import project5 from "@/assets/project-5.png";
 import project6 from "@/assets/project-6.png";
 import project7 from "@/assets/project-7.png";
+import project8 from "@/assets/project-8.png";
 
 type ProjectItem = {
   title: string;
@@ -65,6 +66,14 @@ const projects: ProjectItem[] = [
     image: project5,
     demoUrl: "",
     githubUrl: "https://github.com/ashmikan/CashFlow",
+  },
+  {
+    title: "ResuMate - Online Resume Builder",
+    desc: "A React-based resume builder with live preview and export. Users can enter personal details, upload a profile photo, choose from multiple templates (Modern Sidebar, Minimalist, Creative, Executive), pick accent colors, and download a high-quality PDF.",
+    tags: ["React", "html2canvas", "jsPDF", "CSS", "Bootstrap"],
+    image: project8,
+    demoUrl: "",
+    githubUrl: "https://github.com/ashmikan/ResuMate"
   },
   {
     title: "2048 Pygame",
