@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Medium } from "lucide-react";
 
 const socials = [
   { icon: Github, label: "GitHub", href: "https://github.com/ashmikan" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ashmika-nathali/" },
+  { icon: Medium, label: "Medium", href: "https://medium.com/@ashmikanathali246" },
 ];
 
 const Footer = () => (

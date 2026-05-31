@@ -7,7 +7,7 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "Laravel", "REST APIs"],
+    skills: ["Node.js", "Express", "Laravel", ".NET","REST APIs"],
   },
   {
     title: "Databases",
@@ -15,7 +15,7 @@ const skillCategories = [
   },
   {
     title: "Tools & Design",
-    skills: ["Git", "Figma", "VS Code", "Jira", "Postman", "JUnit", "Cisco Packet Tracer"],
+    skills: ["Git", "Figma", "VS Code", "Jira", "AWS","Postman", "JUnit", "Cisco Packet Tracer"],
   },
 ];
 
