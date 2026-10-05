@@ -1,20 +1,17 @@
-# 🌟 Ashmika Nathali — Developer Portfolio
+<h1 align="center">Ashmika Nathali - Developer Portfolio 👩🏼‍💻</h1>
 
-A modern, responsive, and animated personal portfolio website designed and developed to showcase full-stack software development projects, technical skills, and design expertise.
-
-Built with **React 19**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
+<p align="center">A modern, responsive and animated personal portfolio website designed and developed to showcase full-stack software development projects, technical skills and design expertise.</p>
 
 ---
 
 ## ✨ Features
 
-- **🎨 Modern Glassmorphic Design**: Clean aesthetic with sleek dark/light mode toggle powered by `next-themes`.
-- **⚡ High Performance**: Bundled with Vite for instant Hot Module Replacement (HMR) and optimized production builds.
-- **🎬 Fluid Animations**: Micro-interactions, scroll-triggered reveals, and floating elements crafted with Framer Motion.
-- **📱 Fully Responsive**: Tailored layout with custom breakpoints for desktop, tablet, and mobile displays.
-- **📬 Interactive Contact Form**: Serverless email delivery using **Web3Forms** with client-side validation and feedback toasts.
-- **💼 Project Showcase**: Highlights full-stack, AI, and frontend applications with repository links and technology badges.
-- **🛠️ Testing Ready**: Integrated with **Vitest**, **React Testing Library**, and **Playwright**.
+- **🎨 Modern Glassmorphic Design**: Clean aesthetic with sleek dark/light mode toggle.
+- **⚡ High Performance**: Fast builds and instant updates powered by Vite.
+- **🎬 Fluid Animations**: Scroll-triggered reveals and floating elements crafted with Framer Motion.
+- **📱 Fully Responsive**: Tailored layout for desktop, tablet and mobile displays.
+- **📬 Interactive Contact Form**: Serverless email delivery using **Web3Forms**.
+- **💼 Project Showcase**: Highlights full-stack, AI and frontend applications with repository links.
 
 ---
 
@@ -159,17 +156,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 
 ---
 
-## 👤 Author
+<h2 align="center">Thank You! 👩🏼‍💻 </h2>
 
-**Ashmika Nathali**
-- **Location**: Kalutara, Sri Lanka
-- **GitHub**: [@ashmikan](https://github.com/ashmikan)
-- **LinkedIn**: [ashmika-nathali](https://www.linkedin.com/in/ashmika-nathali/)
-- **Medium**: [@ashmikanathali246](https://medium.com/@ashmikanathali246)
-- **Email**: [ashmika.nathali123@gmail.com](mailto:ashmika.nathali123@gmail.com)
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+<div align="center">
+Credit: <a href="https://github.com/ashmikan">Ashmika Nathali </a>
+Last Edited on: 04/10/2026
+</div>
