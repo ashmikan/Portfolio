@@ -1,86 +1,175 @@
-# Getting Started with Create React App
+# 🌟 Ashmika Nathali — Developer Portfolio
 
-## Contact Form Setup (Web3Forms)
+A modern, responsive, and animated personal portfolio website designed and developed to showcase full-stack software development projects, technical skills, and design expertise.
 
-The contact form in this portfolio sends submissions using Web3Forms.
+Built with **React 19**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
 
-1. Go to https://web3forms.com and create a free access key for your email inbox.
-2. Create a `.env` file in the project root.
-3. Add this variable:
+---
 
+## ✨ Features
+
+- **🎨 Modern Glassmorphic Design**: Clean aesthetic with sleek dark/light mode toggle powered by `next-themes`.
+- **⚡ High Performance**: Bundled with Vite for instant Hot Module Replacement (HMR) and optimized production builds.
+- **🎬 Fluid Animations**: Micro-interactions, scroll-triggered reveals, and floating elements crafted with Framer Motion.
+- **📱 Fully Responsive**: Tailored layout with custom breakpoints for desktop, tablet, and mobile displays.
+- **📬 Interactive Contact Form**: Serverless email delivery using **Web3Forms** with client-side validation and feedback toasts.
+- **💼 Project Showcase**: Highlights full-stack, AI, and frontend applications with repository links and technology badges.
+- **🛠️ Testing Ready**: Integrated with **Vitest**, **React Testing Library**, and **Playwright**.
+
+---
+
+## 🛠️ Tech Stack
+
+### Core & Framework
+- **Framework**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Bundler & Tooling**: [Vite 8](https://vite.dev/)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+
+### Styling & UI
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + PostCSS
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Theme**: [next-themes](https://github.com/pacocoursey/next-themes) (Dark / Light)
+- **UI Components & Utilities**: Radix UI Primitives, `clsx`, `tailwind-merge`, `class-variance-authority`
+
+### Testing
+- **Unit & Integration**: [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/)
+- **E2E Testing**: [Playwright](https://playwright.dev/)
+
+---
+
+## 📂 Project Structure
+
+```text
+portfolio/
+├── public/                 # Static assets and icons
+├── src/
+│   ├── assets/             # Images, project screenshots, and media
+│   ├── components/         # Reusable UI & section components
+│   │   ├── ui/             # Primitive UI components (toasts, tooltips, buttons)
+│   │   ├── AboutSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   ├── Footer.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── LoadingScreen.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   ├── SectionTransition.tsx
+│   │   ├── SkillsSection.tsx
+│   │   └── theme-provider.tsx
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # Utility helpers (cn, etc.)
+│   ├── pages/              # Page layouts (Index, NotFound)
+│   ├── App.tsx             # Main application layout and routes
+│   ├── index.css           # Global Tailwind and CSS variable tokens
+│   └── main.tsx            # Application entry point
+├── .env.example            # Environment variable template
+├── package.json            # Dependencies and npm scripts
+├── tailwind.config.ts      # Tailwind CSS configuration
+└── vite.config.ts          # Vite build configuration
 ```
-VITE_WEB3FORMS_ACCESS_KEY=your_real_access_key
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have one of the following installed:
+- [Node.js](https://nodejs.org/) (version `18.x` or higher recommended)
+- [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), or [Bun](https://bun.sh/)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ashmikan/Portfolio.git
+cd portfolio
 ```
 
-4. Restart the dev server after updating environment variables.
+### 2. Install Dependencies
 
-When someone submits the contact form, the message is delivered to the email inbox linked to your Web3Forms access key.
+Using npm:
+```bash
+npm install
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Or using Bun:
+```bash
+bun install
+```
 
-## Available Scripts
+### 3. Configure Environment Variables
 
-In the project directory, you can run:
+The contact form is wired to [Web3Forms](https://web3forms.com) for direct email delivery.
 
-### `npm start`
+1. Obtain a free access key from [web3forms.com](https://web3forms.com).
+2. Copy the example `.env` file:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+cp .env.example .env
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Open `.env` and set your key:
 
-### `npm test`
+```env
+VITE_WEB3FORMS_ACCESS_KEY=your_actual_access_key_here
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> **Note**: If `VITE_WEB3FORMS_ACCESS_KEY` is not provided, the contact form will notify users to configure the key before submitting.
 
-### `npm run build`
+### 4. Run Development Server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
+or
+```bash
+npx vite
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📜 Available Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Command | Action |
+| :--- | :--- |
+| `npm start` | Starts the local development server with Vite |
+| `npm run build` | Compiles TypeScript and creates an optimized production bundle in `dist/` |
+| `npm run preview` | Locally previews the production build created in `dist/` |
+| `npm test` | Executes test suites using Vitest |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚢 Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Vercel (Recommended)
+1. Push your repository to GitHub.
+2. Import the project into [Vercel](https://vercel.com).
+3. Set the Framework Preset to **Vite**.
+4. Add the `VITE_WEB3FORMS_ACCESS_KEY` under **Environment Variables**.
+5. Deploy.
 
-## Learn More
+### Netlify
+1. Connect your repository on [Netlify](https://www.netlify.com).
+2. Set Build command to `npm run build` and Publish directory to `dist`.
+3. Add `VITE_WEB3FORMS_ACCESS_KEY` in site settings.
+4. Deploy.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👤 Author
 
-### Code Splitting
+**Ashmika Nathali**
+- **Location**: Kalutara, Sri Lanka
+- **GitHub**: [@ashmikan](https://github.com/ashmikan)
+- **LinkedIn**: [ashmika-nathali](https://www.linkedin.com/in/ashmika-nathali/)
+- **Medium**: [@ashmikanathali246](https://medium.com/@ashmikanathali246)
+- **Email**: [ashmika.nathali123@gmail.com](mailto:ashmika.nathali123@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and available under the [MIT License](LICENSE).
