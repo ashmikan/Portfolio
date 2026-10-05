@@ -8,6 +8,7 @@ import project5 from "@/assets/project-5.png";
 import project6 from "@/assets/project-6.png";
 import project7 from "@/assets/project-7.png";
 import project8 from "@/assets/project-8.png";
+import project9 from "@/assets/project-9.png";
 
 type ProjectItem = {
   title: string;
@@ -20,7 +21,7 @@ type ProjectItem = {
 
 const projects: ProjectItem[] = [
   {
-    title: "SkyLumin - Weather App",
+    title: "SkyLumin | Weather App",
     desc: "A clean and responsive weather application built with React and Vite that lets users quickly check real-time weather conditions for any city. It provides essential details like temperature, humidity, wind speed, and dynamic weather visuals/icons.",
     tags: ["React", "Vite", "JavaScript", "Weather API"],
     image: project1,
@@ -28,7 +29,7 @@ const projects: ProjectItem[] = [
     githubUrl: "https://github.com/ashmikan/Weather-App",
   },
   {
-    title: "Planova - Event management Web Platform",
+    title: "Planova | Event management Web Platform",
     desc: "A web platform for planning and managing events like weddings, engagements, and birthday parties.",
     tags: ["React", "Express.js", "Node.js", "MongoDB", "Figma"],
     image: project2,
@@ -36,7 +37,7 @@ const projects: ProjectItem[] = [
     githubUrl: "https://github.com/Pabasara2002/Planova---Frontend",
   },
   {
-    title: "ScanMe:  AI-Based Body Posture Analysis",
+    title: "ScanMe |  AI-Based Body Posture Analysis",
     desc: "An AI-powered web application designed to analyze full-body images and detect posture abnormalities in real time.",
     tags: ["Laravel", "Python", "PHP", "OpenCV", "MediaPipe Pose", "MySQL"],
     image: project3,
@@ -44,7 +45,7 @@ const projects: ProjectItem[] = [
     githubUrl: "https://github.com/AI-full-body-Image-analysis/AI-full-body-image-analysis",
   },
   {
-    title: "Lumiera - Modern Social Media Platform",
+    title: "Lumiera | Modern Social Media Platform",
     desc: "A modern social media platform with authentication, posts, likes, comments, follows, notifications, and real-time chat.",
     tags: ["React", "Node.js", "Express.js", "MySQL2", "Socket.io", "JWT", "Multer"],
     image: project4,
@@ -52,7 +53,7 @@ const projects: ProjectItem[] = [
     githubUrl: "https://github.com/ashmikan/Socialmedia-Lumiera",
   },
   {
-    title: "Floréa - Flower Shop",
+    title: "Floréa | Flower Shop",
     desc: "A stylish and responsive flower shop web application built with ASP.NET Core MVC that lets users browse bouquets, view product details, manage a cart, and explore a warm, elegant floral shopping experience.",
     tags: ["ASP.NET Core MVC", "C#", "Bootstrap", "Razor"],
     image: project7,
@@ -60,7 +61,7 @@ const projects: ProjectItem[] = [
     githubUrl: "https://github.com/ashmikan/Florea"
   },
   {
-    title: "CashFlow - Personal Finance Tracker",
+    title: "CashFlow | Personal Finance Tracker",
     desc: "A full-stack personal finance app that helps users track income and expenses, manage transactions securely, and view clear dashboard insights such as summaries, recent activity, monthly reports, and charts for better money decisions.",
     tags: ["React", "Node.js", "Express.js", "MySQL"],
     image: project5,
@@ -68,7 +69,15 @@ const projects: ProjectItem[] = [
     githubUrl: "https://github.com/ashmikan/CashFlow",
   },
   {
-    title: "ResuMate - Online Resume Builder",
+    title: "Ashie | Literary Journal",
+    desc: "A romantic digital journal for book lovers and quote collectors, featuring literary excerpts, interactive likes, a vintage-inspired design, an About section, and a reader thoughts form.",
+    tags: ["Astro", "Tailwind CSS", "TypeScript", "Upstash Redis", "Vite"],
+    image: project9,
+    demoUrl: "https://ashie-journal.vercel.app",
+    githubUrl: "https://github.com/ashmikan/Ashie-Journal"
+  },
+  {
+    title: "ResuMate | Online Resume Builder",
     desc: "A React-based resume builder with live preview and export. Users can enter personal details, upload a profile photo, choose from multiple templates (Modern Sidebar, Minimalist, Creative, Executive), pick accent colors, and download a high-quality PDF.",
     tags: ["React", "html2canvas", "jsPDF", "CSS", "Bootstrap"],
     image: project8,
@@ -135,7 +144,7 @@ const ProjectsSection = () => (
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-body font-medium text-accent-foreground bg-accent/90 px-4 py-2 rounded-lg hover:bg-accent transition-colors"
                       >
-                        <ExternalLink size={14} /> Demo
+                        <ExternalLink size={14} />
                       </a>
                     )}
                     {project.githubUrl && (
